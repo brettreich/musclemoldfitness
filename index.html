@@ -18,59 +18,7 @@
             align-items: center;
             text-align: center;
             min-height: 100vh; /* Ensure the body takes up the full viewport height */
-        }
-
-        header {
-            background-color: #3b3a3a; /* Medium grey header */
-            width: 100%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative; /* Allow positioning of banner */
-            overflow: hidden; /* Prevent content overflow */
-        }
-
-        .banner {
-            position: relative; /* Change to relative to avoid clipping */
-            width: 100%;
-            height: 200px; /* Adjust height as needed */
-            background-image: url('/home/threat/musclemoldfitness/banner.jpg'); /* Replace with your image path */
-            background-size: cover; /* Ensure the image covers the entire banner */
-            background-position: center; /* Center the image */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            font-size: 2em;
-            font-weight: 700;
-        }
-
-        nav {
-            margin-top: 20px; /* Add margin to separate nav from banner */
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 30px; /* Space between links */
-        }
-
-        nav ul li {
-            display: inline;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.8em; /* Larger font size for links */
-            font-weight: 700;
-            transition: color 0.3s, transform 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #000; /* Black text on hover */
-            transform: scale(1.1); /* Slight zoom effect on hover */
+            padding-top: 80px; /* Add padding to prevent content from being hidden under the fixed header */
         }
 
         main {
@@ -117,17 +65,68 @@
             color: #fff;
             font-size: 1.2em;
         }
+
+        header {
+            background-color: #ffffff; /* Medium grey header */
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Space between logo and menu */
+            padding: 0 20px; /* Adjust padding for spacing */
+            height: 80px; /* Header height */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: fixed; /* Fix the header at the top */
+            top: 0; /* Position it at the very top of the page */
+            z-index: 1000; /* Ensure it stays above other elements */
+        }
+
+        .logo {
+            height: 100%; /* Make the logo fit the header height */
+            width: auto; /* Maintain aspect ratio */
+        }
+
+        nav {
+            flex-grow: 1; /* Allow nav to take up remaining space */
+            display: flex;
+            justify-content: center; /* Center the links */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px; /* Space between links */
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #000; /* Black text for links */
+            text-decoration: none;
+            font-size: 1.2em; /* Adjust font size for links */
+            font-weight: 700;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #666; /* Dark grey text on hover */
+            transform: scale(1.1); /* Slight zoom effect on hover */
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="banner">Welcome to Muscle Mold Fitness</div>
+        <img src="/home/threat/musclemoldfitness/banner2.jpg" alt="Muscle Mold Fitness Logo" class="logo"> <!-- Small logo -->
         <nav>
             <ul>
-                <li><a href="pages/bio.html">Bio</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/bio.html">Biography</a></li>
                 <li><a href="pages/prices.html">Prices</a></li>
+                <li><a href="pages/pictures.html">Pictures</a></li> <!-- Centered Pictures link -->
                 <li><a href="pages/contact.html">Contact</a></li>
-                <li><a href="pages/pictures.html">Pictures</a></li>
             </ul>
         </nav>
     </header>
