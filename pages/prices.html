@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Muscle Mold Fitness</title>
+    <title>Prices - Muscle Mold Fitness</title>
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -87,43 +87,27 @@
             line-height: 1.6;
         }
 
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-top: 20px;
+        .pricing-table {
+            margin: 20px auto; /* Center the table horizontally */
+            text-align: left;
             width: 100%;
-            max-width: 500px;
-            margin-left: auto; /* Center horizontally */
-            margin-right: auto; /* Center horizontally */
-            text-align: left; /* Align text boxes with the text above */
+            max-width: 600px;
         }
 
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form button {
-            font-size: 1.2em;
+        .pricing-table th,
+        .pricing-table td {
             padding: 10px;
-            border: none;
-            border-radius: 5px;
-            width: 100%; /* Ensure inputs take up the full width of the form */
+            border: 1px solid #fff;
         }
 
-        .contact-form input,
-        .contact-form textarea {
+        .pricing-table th {
             background-color: #333;
             color: #fff;
         }
 
-        .contact-form button {
-            background-color: #666;
-            color: #fff;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .contact-form button:hover {
+        .pricing-table td {
             background-color: #444;
+            color: #fff;
         }
     </style>
 </head>
@@ -141,14 +125,34 @@
         </nav>
     </header>
     <main>
-        <h2>Contact Us</h2>
-        <p>I'd love to hear from you! Fill out the form below to get in touch with me.</p>
-        <form class="contact-form" action="mailto:brett@musclemold.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <h2>Our Prices</h2>
+        <p>Explore our affordable pricing plans to help you achieve your fitness goals.</p>
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Price</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic Membership</td>
+                    <td>$30/month</td>
+                    <td>Access to gym facilities during staffed hours.</td>
+                </tr>
+                <tr>
+                    <td>Premium Membership</td>
+                    <td>$50/month</td>
+                    <td>24/7 access, free group classes, and a personal training session.</td>
+                </tr>
+                <tr>
+                    <td>Personal Training</td>
+                    <td>$40/session</td>
+                    <td>One-on-one training with a certified trainer.</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
     <footer>
         <p>&copy; 2025 Muscle Mold Fitness. All rights reserved.</p>
